@@ -1,6 +1,7 @@
 function onNumberClick(x){
+
     $(document).ready(function(){
-        if(typeof(x) != Number){
+        if(x == Infinity || x == NaN){
             alert("Не делай так, пожалуйста");
         }else{
             $("#firstOut").append(x);
