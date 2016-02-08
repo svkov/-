@@ -5,12 +5,22 @@ function onNumberClick(x){
 }
 function onEventClick(x){
     $(document).ready(function(){
-        $("#firstOut").append(" "+x+" ");
+        var text = $("#firstOut").text();
+        var prevOperation = text.substr(text.length-2, text.length-2);
+        var checkPrevOperation = false;
+        if(prevOperation == "+ " || prevOperation == "- " || prevOperation == "* " || prevOperation == "/ " || prevOperation == ") " || prevOperation == "( "){
+            checkPrevOperation = true;
+        }
+        if(text == ""){
+            alert("Сначала введите число!");
+        }else if(checkPrevOperation) {
+            alert("Нельзя вводить два знака подряд!");
+        }else{
+            $("#firstOut").append(" " + x + " ");
+        }
     });
-    eventText = x;
 }
 function onEqualsClick(){
-    var a = 0,b = 0;
     $(document).ready(function(){
         $(".result").text(eval($("#firstOut").text()));
     });
@@ -21,4 +31,4 @@ function clearText(){
         $("#firstOut").text("");
     });
 }
-var eventText = "";
+var operations = ["+", "-", "*", "/"];
