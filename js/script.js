@@ -1,6 +1,10 @@
 function onNumberClick(x){
     $(document).ready(function(){
-        $("#firstOut").append(x);
+        if(typeof(x) != Number){
+            alert("Не делай так, пожалуйста");
+        }else{
+            $("#firstOut").append(x);
+        }
     });
 }
 function onEventClick(x){
@@ -22,7 +26,17 @@ function onEventClick(x){
 }
 function onEqualsClick(){
     $(document).ready(function(){
-        $(".result").text(eval($("#firstOut").text()));
+        var text = $("#firstOut").text();
+        var prevOperation = text.substr(text.length-2, text.length-2);
+        var checkPrevOperation;
+        if(prevOperation == "+ " || prevOperation == "- " || prevOperation == "* " || prevOperation == "/ " || prevOperation == ") " || prevOperation == "( "){
+            checkPrevOperation = true;
+        }
+        if(checkPrevOperation){
+            alert("Введите второе число!");
+        }else{
+            $(".result").text(eval($("#firstOut").text()));
+        }
     });
 }
 function clearText(){
