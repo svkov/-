@@ -1,0 +1,91 @@
+html{
+    background-color: #232323;
+    color: #fff;
+}
+body{
+    margin-left: 37.5%;
+}
+button{
+    color: #FFF;
+    background-color: rgb(105, 105, 105);
+    height: 50%;
+    width: 100px;
+    height: 30px;
+}
+.numbers{
+    position: absolute;
+    margin-top: 100px;
+}
+.out{
+    width: 412px;
+    height: 70px;
+    margin-top: 30px;
+    background-color: #373737;
+    display: block;
+    position: absolute;
+}
+.out>ul{
+    margin-top: -10px;
+    margin-left: -15px;
+    width: 212px;
+    height: 62px;
+    list-style: none;
+}
+#div{
+    height: 25px;
+    position: absolute;
+    margin-left: 208px;
+}
+#zero{
+    position: absolute;
+    width: 305px;
+    height: 25px;
+}
+#firstOut{
+    position: absolute;
+    background-color: #373737;
+}
+#equals{
+    position: absolute;
+    margin-left: 3px;
+    margin-top: -10px;
+    width: 305px;
+    height: 25px;
+}
+#firstBracket{
+    height: 25px;
+    width: 11%;
+    margin-top: 35px;
+    margin-left: 105px;
+    position: absolute;
+}
+#secondBracket{
+    height: 25px;
+    width: 11%;
+    margin-left: 55px;
+    margin-top: 35px;
+    position: absolute;
+}
+#clear{
+    width: 40px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 345px;
+}
+.answer{
+    width: 412px;
+    height: 100px;
+    background-color: #373737;
+    position: absolute;
+    margin-top: 300px;
+}
+.answer>p{
+    margin-left: 40%;
+}
+.events{
+    position: absolute;
+    margin-top: 250px;
+}
+.out>p{
+    float: left;
+}

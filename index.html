@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/script.js" ></script>
+</head>
+<body>
+    <div class="out">
+        <ul>
+            <li><p id="firstOut"></p></li>
+            <li><button onclick="clearText()" id="clear">C</button></li>
+        </ul>
+    </div>
+    <br>
+    <div class="numbers">
+        <table>
+            <tr>
+                <td><button onclick="onNumberClick(1)" class="number" id="one">1</button></td>
+                <td><button onclick="onNumberClick(2)" class="number" id="two">2</button></td>
+                <td><button onclick="onNumberClick(3)" class="number" id="three">3</button></td>
+                <td><button class="event" id="sum" onclick="onEventClick('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="onNumberClick(4)" class="number" id="four">4</button></td>
+                <td><button onclick="onNumberClick(5)" class="number" id="five">5</button></td>
+                <td><button onclick="onNumberClick(6)" class="number" id="six">6</button></td>
+                <td><button class="event" id="minus" onclick="onEventClick('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="onNumberClick(7)" class="number" id="seven">7</button></td>
+                <td><button onclick="onNumberClick(8)" class="number" id="eight">8</button></td>
+                <td><button onclick="onNumberClick(9)" class="number" id="nine">9</button></td>
+                <td><button class="event" id="mull" onclick="onEventClick('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="onNumberClick(0)" class="number" id="zero">0</button></td>
+                <td><button class="event" id="div" onclick="onEventClick('/')">/</button></td>
+                <td><button onclick="onEventClick('(')" class="event" id="firstBracket">(</button></td>
+                <td><button onclick="onEventClick(')')" class="event" id="secondBracket">)</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="events">
+        <button id="equals" onclick="onEqualsClick()">=</button>
+    </div>
+    <div class="answer">
+        <p>Ответ:</p>
+        <p class="result"></p>
+    </div>
+</body>
+</html>
